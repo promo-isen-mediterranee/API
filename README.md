@@ -15,6 +15,17 @@ git submodule update --init --recursive
 git submodule update --recursive --remote
 ```
 
+# How to add a submodule
+
+```shell
+git submodule add -b <branch_name> --name <submodule_name> <repository> <path>
+```
+
+Example:
+```shell
+git submodule add -b main --name API_Authentication https://github.com/promo-isen-mediterranee/Authentification-LDAP.git API_Authentication
+```
+
 # Dockerize the services along with the database
 
 Execute the following command:
