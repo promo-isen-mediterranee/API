@@ -1,0 +1,4 @@
+[submodule "API_Authentication"]
+	path = API_Authentication
+	url = https://github.com/promo-isen-mediterranee/Authentification-LDAP.git
+	branch = main
