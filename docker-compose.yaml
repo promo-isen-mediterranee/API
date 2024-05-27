@@ -38,3 +38,16 @@ services:
       - logistisen_db
     volumes:
       - ./API_Stock:/API_Stock:ro
+  api_event:
+    build:
+      context: API_Event
+      dockerfile: Dockerfile
+    container_name: API_Event
+    environment:
+      - 'SECRET_KEY=c3Q2PO9y0XjN6Twk5u1MSyVIVpTlYRi5'
+    ports:
+      - "5200:5200"
+    depends_on:
+      - logistisen_db
+    volumes:
+      - ./API_Event:/API_Event:ro
