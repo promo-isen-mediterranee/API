@@ -1,4 +1,3 @@
-version: '3'
 name: logistisen
 
 services:
@@ -15,14 +14,27 @@ services:
       - '5432:5432'
   api_auth:
     build:
-      context: .
-      dockerfile: API_Authentication/Dockerfile
+      context: API_Authentication
+      dockerfile: Dockerfile
     container_name: API_Authentication
     environment:
-      -SECRET_KEY=c3Q2PO9y0XjN6Twk5u1MSyVIVpTlYRi5
+      - 'SECRET_KEY=c3Q2PO9y0XjN6Twk5u1MSyVIVpTlYRi5'
     ports:
       - "5050:5050"
     depends_on:
       - logistisen_db
     volumes:
-      - .:/API_Authentication:ro
+      - ./API_Authentication:/API_Authentication:ro
+  api_stock:
+    build:
+      context: API_Stock
+      dockerfile: Dockerfile
+    container_name: API_Stock
+    environment:
+      - 'SECRET_KEY=c3Q2PO9y0XjN6Twk5u1MSyVIVpTlYRi5'
+    ports:
+      - "5100:5100"
+    depends_on:
+      - logistisen_db
+    volumes:
+      - ./API_Stock:/API_Stock:ro
