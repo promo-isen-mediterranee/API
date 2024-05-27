@@ -6,3 +6,7 @@
 	path = API_Stock
 	url = https://github.com/promo-isen-mediterranee/Stock.git
 	branch = main
+[submodule "API_Event"]
+	path = API_Event
+	url = https://github.com/promo-isen-mediterranee/Event.git
+	branch = main

@@ -252,6 +252,8 @@ INSERT INTO permission(label) VALUES ('Read Role');
 INSERT INTO permission(label) VALUES ('Write Role');
 INSERT INTO permission(label) VALUES ('Write User Role');
 INSERT INTO permission(label) VALUES ('Read Permission');
+INSERT INTO permission(label) VALUES ('Read Person');
+INSERT INTO permission(label) VALUES ('Write Person');
 INSERT INTO permission(label) VALUES ('Read Role Permission');
 INSERT INTO permission(label) VALUES ('Write Role Permission');
 
@@ -275,3 +277,5 @@ INSERT INTO role_permission(role_id, permission_id) VALUES(1, 17);
 INSERT INTO role_permission(role_id, permission_id) VALUES(1, 18);
 INSERT INTO role_permission(role_id, permission_id) VALUES(1, 19);
 INSERT INTO role_permission(role_id, permission_id) VALUES(1, 20);
+INSERT INTO role_permission(role_id, permission_id) VALUES(1, 21);
+INSERT INTO role_permission(role_id, permission_id) VALUES(1, 22);
