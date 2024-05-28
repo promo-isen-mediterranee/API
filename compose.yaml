@@ -19,6 +19,7 @@ services:
     container_name: API_Authentication
     environment:
       - 'SECRET_KEY=c3Q2PO9y0XjN6Twk5u1MSyVIVpTlYRi5'
+      - 'BYPASS_AUTH_TOKEN=v2Fq5EoogcM0F7L2dtvZ9KZNaYpdfdx7'
     ports:
       - "5050:5050"
     depends_on:
@@ -50,4 +51,4 @@ services:
     depends_on:
       - logistisen_db
     volumes:
-      - ./API_Event:/API_Event:ro
+      - ./API_Event:/API_Event:ro=
