@@ -33,7 +33,7 @@ services:
     environment:
       - 'SECRET_KEY=c3Q2PO9y0XjN6Twk5u1MSyVIVpTlYRi5'
     ports:
-      - "5100:5100"
+      - "8000:8000"
     depends_on:
       - logistisen_db
     volumes:
@@ -46,7 +46,7 @@ services:
     environment:
       - 'SECRET_KEY=c3Q2PO9y0XjN6Twk5u1MSyVIVpTlYRi5'
     ports:
-      - "5200:5200"
+      - "5000:5000"
     depends_on:
       - logistisen_db
     volumes:
