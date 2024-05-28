@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS item_location (
     id SERIAL PRIMARY KEY,
     item_id INT REFERENCES item(id) ON UPDATE CASCADE ON DELETE CASCADE,
     location_id INT REFERENCES location(id) ON UPDATE CASCADE,
+    nb_to_order INT NOT NULL DEFAULT 0,
     quantity INT NOT NULL
 );
 
@@ -33,7 +34,7 @@ CREATE TABLE IF NOT EXISTS item_location (
 CREATE TABLE IF NOT EXISTS users (
     id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
     username VARCHAR(101) NOT NULL,
-    mail VARCHAR(50) NOT NULL,
+    mail VARCHAR(175) NOT NULL,
     nom VARCHAR(50) NOT NULL,
     prenom VARCHAR(50) NOT NULL,
     is_active BOOLEAN NOT NULL DEFAULT TRUE,
@@ -127,7 +128,7 @@ CREATE TABLE IF NOT EXISTS alert (
     id SERIAL PRIMARY KEY,
     role_id INT REFERENCES role(id) ON UPDATE CASCADE ON DELETE CASCADE,
     set_on TIMESTAMP NOT NULL,
-    mail VARCHAR(50)
+    mail VARCHAR(175)
 );
 
 INSERT INTO location (address, city, room) VALUES ('Palais Neptune', 'Toulon', '007');
