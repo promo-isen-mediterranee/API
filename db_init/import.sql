@@ -35,8 +35,8 @@ CREATE TABLE IF NOT EXISTS users (
     id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
     username VARCHAR(101) NOT NULL,
     mail VARCHAR(175) NOT NULL,
-    nom VARCHAR(50) NOT NULL,
-    prenom VARCHAR(50) NOT NULL,
+    lastName VARCHAR(50) NOT NULL,
+    firstName VARCHAR(50) NOT NULL,
     is_active BOOLEAN NOT NULL DEFAULT TRUE,
     is_authenticated BOOLEAN NOT NULL DEFAULT FALSE
 );
