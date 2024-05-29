@@ -135,11 +135,11 @@ INSERT INTO location (address, city, room) VALUES ('Palais Neptune', 'Toulon', '
 INSERT INTO location (address, city, room) VALUES ('Parc Chanot', 'Marseille', '013');
 INSERT INTO location (address, city, room) VALUES ('ISEN, Place Georges Pompidou', 'Toulon', '456');
 
-INSERT INTO users(username, mail, prenom, nom) VALUES ('marc.etavard', 'marc.etavard@isen.yncrea.fr', 'Marc', 'Etavard');
-INSERT INTO users(username, mail, prenom, nom) VALUES ('alex.olivier', 'alex.olivier@isen.yncrea.fr', 'Alëx', 'Olivier');
-INSERT INTO users(username, mail, prenom, nom) VALUES ('corentin.thibaud', 'corentin.thibaud@isen.yncrea.fr', 'Corentin', 'Thibaud');
-INSERT INTO users(username, mail, prenom, nom) VALUES ('juan.gomez-sanchez', 'juan.gomez-sanchez@isen.yncrea.fr', 'Juan', 'Gomez-Sanchez');
-INSERT INTO users(username, mail, prenom, nom) VALUES ('dorian.bourdier', 'dorian.bourdier@isen.yncrea.fr', 'Dorian', 'Bourdier');
+INSERT INTO users(username, mail, firstName, lastName) VALUES ('marc.etavard', 'marc.etavard@isen.yncrea.fr', 'Marc', 'Etavard');
+INSERT INTO users(username, mail, firstName, lastName) VALUES ('alex.olivier', 'alex.olivier@isen.yncrea.fr', 'Alëx', 'Olivier');
+INSERT INTO users(username, mail, firstName, lastName) VALUES ('corentin.thibaud', 'corentin.thibaud@isen.yncrea.fr', 'Corentin', 'Thibaud');
+INSERT INTO users(username, mail, firstName, lastName) VALUES ('juan.gomez-sanchez', 'juan.gomez-sanchez@isen.yncrea.fr', 'Juan', 'Gomez-Sanchez');
+INSERT INTO users(username, mail, firstName, lastName) VALUES ('dorian.bourdier', 'dorian.bourdier@isen.yncrea.fr', 'Dorian', 'Bourdier');
 
 INSERT INTO role(label) VALUES ('Admin');
 
