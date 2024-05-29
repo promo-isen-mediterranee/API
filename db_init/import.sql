@@ -35,8 +35,8 @@ CREATE TABLE IF NOT EXISTS users (
     id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
     username VARCHAR(101) NOT NULL,
     mail VARCHAR(175) NOT NULL,
-    lastName VARCHAR(50) NOT NULL,
-    firstName VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    first_name VARCHAR(50) NOT NULL,
     is_active BOOLEAN NOT NULL DEFAULT TRUE,
     is_authenticated BOOLEAN NOT NULL DEFAULT FALSE
 );
@@ -135,11 +135,11 @@ INSERT INTO location (address, city, room) VALUES ('Palais Neptune', 'Toulon', '
 INSERT INTO location (address, city, room) VALUES ('Parc Chanot', 'Marseille', '013');
 INSERT INTO location (address, city, room) VALUES ('ISEN, Place Georges Pompidou', 'Toulon', '456');
 
-INSERT INTO users(username, mail, firstName, lastName) VALUES ('marc.etavard', 'marc.etavard@isen.yncrea.fr', 'Marc', 'Etavard');
-INSERT INTO users(username, mail, firstName, lastName) VALUES ('alex.olivier', 'alex.olivier@isen.yncrea.fr', 'Alëx', 'Olivier');
-INSERT INTO users(username, mail, firstName, lastName) VALUES ('corentin.thibaud', 'corentin.thibaud@isen.yncrea.fr', 'Corentin', 'Thibaud');
-INSERT INTO users(username, mail, firstName, lastName) VALUES ('juan.gomez-sanchez', 'juan.gomez-sanchez@isen.yncrea.fr', 'Juan', 'Gomez-Sanchez');
-INSERT INTO users(username, mail, firstName, lastName) VALUES ('dorian.bourdier', 'dorian.bourdier@isen.yncrea.fr', 'Dorian', 'Bourdier');
+INSERT INTO users(username, mail, first_name, last_name) VALUES ('marc.etavard', 'marc.etavard@isen.yncrea.fr', 'Marc', 'Etavard');
+INSERT INTO users(username, mail, first_name, last_name) VALUES ('alex.olivier', 'alex.olivier@isen.yncrea.fr', 'Alëx', 'Olivier');
+INSERT INTO users(username, mail, first_name, last_name) VALUES ('corentin.thibaud', 'corentin.thibaud@isen.yncrea.fr', 'Corentin', 'Thibaud');
+INSERT INTO users(username, mail, first_name, last_name) VALUES ('juan.gomez-sanchez', 'juan.gomez-sanchez@isen.yncrea.fr', 'Juan', 'Gomez-Sanchez');
+INSERT INTO users(username, mail, first_name, last_name) VALUES ('dorian.bourdier', 'dorian.bourdier@isen.yncrea.fr', 'Dorian', 'Bourdier');
 
 INSERT INTO role(label) VALUES ('Admin');
 
