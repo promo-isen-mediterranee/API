@@ -4,6 +4,8 @@ services:
   logistisen_db:
     image: 'postgres:16'
     container_name: logistisen_db_container
+    networks:
+      - logistisen_network
     volumes:
       - ./db_init:/docker-entrypoint-initdb.d
     environment:
@@ -17,6 +19,8 @@ services:
       context: API_Authentication
       dockerfile: Dockerfile
     container_name: API_Authentication
+    networks:
+      - logistisen_network
     environment:
       - 'SECRET_KEY=c3Q2PO9y0XjN6Twk5u1MSyVIVpTlYRi5'
       - 'BYPASS_TOKEN=v2Fq5EoogcM0F7L2dtvZ9KZNaYpdfdx7'
@@ -31,6 +35,8 @@ services:
       context: API_Stock
       dockerfile: Dockerfile
     container_name: API_Stock
+    networks:
+      - logistisen_network
     environment:
       - 'SECRET_KEY=c3Q2PO9y0XjN6Twk5u1MSyVIVpTlYRi5'
       - 'BYPASS_TOKEN=v2Fq5EoogcM0F7L2dtvZ9KZNaYpdfdx7'
@@ -45,6 +51,8 @@ services:
       context: API_Event
       dockerfile: Dockerfile
     container_name: API_Event
+    networks:
+      - logistisen_network
     environment:
       - 'SECRET_KEY=c3Q2PO9y0XjN6Twk5u1MSyVIVpTlYRi5'
       - 'BYPASS_TOKEN=v2Fq5EoogcM0F7L2dtvZ9KZNaYpdfdx7'
@@ -54,3 +62,6 @@ services:
       - logistisen_db
     volumes:
       - ./API_Event:/API_Event:ro
+networks:
+  logistisen_network:
+    driver: bridge
